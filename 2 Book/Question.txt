@@ -1,0 +1,29 @@
+QUESTION: Write a class named Book in the default package.
+
+1. Class Attributes (all private):
+   - title: String
+   - price: double
+   - category: String
+
+2. Constructors:
+   - Book(): Default constructor.
+   - Book(String title, double price, String category): Parameterized constructor setting all attributes.
+
+3. Methods:
+   - getTitle(): String
+     -> Returns the title with the FIRST CHARACTER in lowercase and ALL OTHER CHARACTERS in uppercase.
+     -> Example: "Java" becomes "jAVA", "OOP" becomes "oOP"
+   
+   - getSalePrice(): double
+     -> Returns the sale price after discount.
+     -> Logic: If category is "IT" (case-insensitive: "it", "It", "IT", "iT"), apply 15% discount (multiply by 0.85).
+     -> Otherwise, return the original price without discount.
+   
+   - toString(): String
+     -> Returns a string formatted as: "TITLE, salePrice"
+     -> Note: 'TITLE' must be formatted using getTitle() logic.
+     -> Note: 'salePrice' must be formatted to 2 decimal places (e.g., 85.00).
+     -> Format: no quotes, just: TITLE, salePrice
+
+Example Output:
+jAVA, 85.00

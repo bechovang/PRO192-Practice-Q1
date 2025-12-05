@@ -1,0 +1,32 @@
+QUESTION: Write a class named Account in the default package.
+
+1. Class Attributes (all private):
+   - accHolder: String (account holder name)
+   - balance: double (account balance in dollars)
+   - isLoyal: boolean (true if loyal customer, false otherwise)
+
+2. Constructors:
+   - Account(): Default constructor.
+   - Account(String accHolder, double balance, boolean isLoyal): Parameterized constructor setting all attributes.
+
+3. Methods:
+   - getAccHolder(): String
+     -> Returns the account holder name with proper formatting.
+     -> Logic: If accHolder is empty string (""), return "Unknown".
+     -> Otherwise, return the name with FIRST LETTER UPPERCASE and ALL OTHER LETTERS LOWERCASE.
+     -> Example: "john" becomes "John", "JANE DOE" becomes "Jane doe"
+   
+   - getFee(): double
+     -> Returns the account fee based on loyalty status.
+     -> Logic: If isLoyal is true, fee is 0.0 (no fee).
+     -> If isLoyal is false, fee is 5% of balance (balance * 0.05).
+   
+   - toString(): String
+     -> Returns a string formatted as: "accHolder, balance"
+     -> Note: 'accHolder' must be formatted using getAccHolder() logic.
+     -> Note: 'balance' must be displayed in its original form (no formatting, as-is).
+     -> Format: no quotes, just: accHolder, balance
+
+Example Output:
+John, 1000.0
+Unknown, 500.5

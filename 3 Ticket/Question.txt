@@ -1,0 +1,30 @@
+QUESTION: Write a class named Ticket in the default package.
+
+1. Class Attributes (all private):
+   - movieName: String
+   - seatType: String
+   - basePrice: double
+
+2. Constructors:
+   - Ticket(): Default constructor.
+   - Ticket(String movieName, String seatType, double basePrice): Parameterized constructor setting all attributes.
+
+3. Methods:
+   - getMovieName(): String
+     -> Returns the movie name by removing the FIRST 2 CHARACTERS and converting the REMAINING PART to lowercase.
+     -> Example: "AVENGERS" becomes "engers", "SPIDERMAN" becomes "iderman"
+     -> If the movie name has 2 or fewer characters, return empty string "".
+   
+   - getFinalPrice(): double
+     -> Returns the final ticket price.
+     -> Logic: If seatType is "VIP" (case-sensitive: must be exact match "VIP"), add 50 to basePrice.
+     -> Otherwise, return the original basePrice without any addition.
+   
+   - toString(): String
+     -> Returns a string formatted as: "movieName, finalPrice"
+     -> Note: 'movieName' must be formatted using getMovieName() logic.
+     -> Note: 'finalPrice' must be formatted to 1 decimal place (e.g., 150.0, 99.5).
+     -> Format: no quotes, just: movieName, finalPrice
+
+Example Output:
+engers, 150.0

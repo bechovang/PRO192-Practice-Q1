@@ -1,0 +1,29 @@
+QUESTION: Write a class named Employee in the default package.
+
+1. Class Attributes (all private):
+   - id: int
+   - name: String
+   - baseSalary: double
+   - workHours: int
+
+2. Constructors:
+   - Employee(): Default constructor.
+   - Employee(int id, String name, double baseSalary, int workHours): Parameterized constructor setting all attributes.
+
+3. Methods:
+   - getName(): String
+     -> Returns the name in FULL UPPERCASE format.
+   
+   - getSalary(): double
+     -> Returns the final salary after calculating bonus.
+     -> Logic: If workHours >= 200, the salary is increased by 20% (multiply by 1.2).
+     -> Otherwise, return the baseSalary without any increase.
+   
+   - toString(): String
+     -> Returns a string formatted as: "NAME - salary"
+     -> Note: 'NAME' must be in uppercase (reuse getName logic).
+     -> Note: 'salary' (the final salary) must be formatted to 2 decimal places (e.g., 1200.00).
+     -> Format: no quotes, just: NAME - salary
+
+Example Output:
+JOHN DOE - 1200.00

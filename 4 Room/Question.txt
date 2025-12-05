@@ -1,0 +1,30 @@
+QUESTION: Write a class named Room in the default package.
+
+1. Class Attributes (all private):
+   - roomId: int
+   - type: String
+   - area: double
+
+2. Constructors:
+   - Room(): Default constructor.
+   - Room(int roomId, String type, double area): Parameterized constructor setting all attributes.
+
+3. Methods:
+   - getType(): String
+     -> Returns the room type by taking ONLY THE FIRST 3 CHARACTERS and converting them to UPPERCASE.
+     -> Example: "Deluxe" becomes "DEL", "Standard" becomes "STA"
+     -> If the type has fewer than 3 characters, return the entire type in uppercase.
+   
+   - getRentPrice(): double
+     -> Returns the rent price based on area.
+     -> Logic: If area > 50.0, rent price is 200.0 dollars.
+     -> If area <= 50.0, rent price is 100.0 dollars.
+   
+   - toString(): String
+     -> Returns a string formatted as: "roomId - TYPE - rentPrice"
+     -> Note: 'TYPE' must be formatted using getType() logic.
+     -> Note: 'rentPrice' must be shown as a whole number (no decimal places).
+     -> Format: no quotes, just: roomId - TYPE - rentPrice
+
+Example Output:
+101 - DEL - 200
